@@ -1,10 +1,10 @@
-﻿@model IEnumerable<Veterinary.Web.Data.Entities.Agenda>
+﻿@model IEnumerable<Veterinary.Web.Data.Entities.ServiceType>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h2>Agenda</h2>
+<h2>Service Types</h2>
 
 <p>
     <a asp-action="Create" class="btn btn-primary">Create New</a>
@@ -13,13 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DateLocal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Remarks)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsAvailable)
+                @Html.DisplayNameFor(model => model.Name)
             </th>
             <th></th>
         </tr>
@@ -28,13 +22,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Remarks)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsAvailable)
+                @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a> |
